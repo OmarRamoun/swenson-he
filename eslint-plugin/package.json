@@ -1,8 +1,8 @@
 {
-  "name": "@via/eslint-plugin",
+  "name": "@swensonhe/eslint-plugin",
   "version": "1.0.0",
   "description": "Custom eslint rules",
-  "author": "Omar Ramoun <omar.ramoun@devteam.bg>",
+  "author": "Omar Ramoun <contact@omarramoun.com>",
   "main": "lib/index.js",
   "scripts": {
     "test": "node ./__tests__/index.test.js"
