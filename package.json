@@ -1,0 +1,89 @@
+{
+  "name": "via",
+  "version": "0.0.9",
+  "private": true,
+  "npmClient": "yarn",
+  "engines": {
+    "node": ">=16.20.0",
+    "yarn": ">=1.22.19",
+    "npm": "please-use-yarn"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
+    "build": "git diff --quiet HEAD origin/main -- src || next build",
+    "start": "next start",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint --max-warnings=0 . --ext=.ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint --max-warnings=0 --fix . --ext=.ts,.tsx,.js,.jsx",
+    "tsprune": "yarn ts-prune -e -i '(assets|server|public|src/index.ts|components/src/index.ts)'",
+    "tsprune:all": "yarn ts-prune -e -i",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "googleapis": "^118.0.0",
+    "next": "^12.3.4",
+    "pg": "^8.10.0",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
+    "react-query": "^3.5.16",
+    "swr": "^2.1.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@eslint-recommended/eslint-config": "^10.0.0",
+    "@next/eslint-plugin-next": "^13.4.2",
+    "@svgr/cli": "^5.5.0",
+    "@testing-library/react": "^11.2.3",
+    "@testing-library/react-hooks": "^5.0.0",
+    "@types/express": "^4.17.17",
+    "@types/node": "^14.14.13",
+    "@types/nodemailer": "^6.4.7",
+    "@types/pg": "^8.6.6",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/styled-components": "^5.1.26",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "@typescript-eslint/types": "^5.59.5",
+    "@via/eslint-plugin": "file:eslint-plugin/lib",
+    "autoprefixer": "^10.4.14",
+    "babel-eslint": "^10.1.0",
+    "prettier": "^2.2.1",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "^13.4.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-import-resolver-babel-module": "^5.3.2",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^10.5.3",
+    "ts-prune": "^0.10.3",
+    "nodemailer": "^6.9.1"
+  },
+  "resolutions": {
+    "@types/react": "18.0.0",
+    "@types/react-dom": "18.0.0",
+    "@types/styled-components": "^5.1.26"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint -- --quiet --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
