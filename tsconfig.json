@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2015",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -23,107 +19,46 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@pages": [
-        "src/pages"
-      ],
-      "@pages/*": [
-        "src/pages/*"
-      ],
-      "@layouts": [
-        "src/layouts"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ],
-      "@components": [
-        "src/components"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@constants": [
-        "src/constants"
-      ],
-      "@constants/*": [
-        "src/constants/*"
-      ],
-      "@context": [
-        "src/context"
-      ],
-      "@context/*": [
-        "src/context/*"
-      ],
-      "@definitions": [
-        "src/definitions"
-      ],
-      "@definitions/*": [
-        "src/definitions/*"
-      ],
-      "@interfaces": [
-        "src/interfaces"
-      ],
-      "@interfaces/*": [
-        "src/interfaces/*"
-      ],
-      "@styles": [
-        "src/styles"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@lib": [
-        "src/lib"
-      ],
-      "@lib/*": [
-        "src/lib/*"
-      ],
-      "@public": [
-        "public"
-      ],
-      "@public/*": [
-        "public/*"
-      ],
-      "@test": [
-        "test"
-      ],
-      "@test/*": [
-        "test/*"
-      ],
-      "@shared": [
-        "shared/index.ts"
-      ],
-      "@utils": [
-        "utils/index.ts"
-      ],
-      "next-env.d.ts": [
-        "next-env.d.ts"
-      ]
+      "@pages": ["src/pages"],
+      "@pages/*": ["src/pages/*"],
+      "@layouts": ["src/layouts"],
+      "@layouts/*": ["src/layouts/*"],
+      "@components": ["src/components"],
+      "@components/*": ["src/components/*"],
+      "@constants": ["src/constants"],
+      "@constants/*": ["src/constants/*"],
+      "@context": ["src/context"],
+      "@context/*": ["src/context/*"],
+      "@definitions": ["src/definitions"],
+      "@definitions/*": ["src/definitions/*"],
+      "@interfaces": ["src/interfaces"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@styles": ["src/styles"],
+      "@styles/*": ["src/styles/*"],
+      "@lib": ["src/lib"],
+      "@lib/*": ["src/lib/*"],
+      "@public": ["public"],
+      "@public/*": ["public/*"],
+      "@test": ["test"],
+      "@test/*": ["test/*"],
+      "@shared": ["shared/index.ts"],
+      "@utils": ["utils/index.ts"],
+      "next-env.d.ts": ["next-env.d.ts"]
     },
     "incremental": true,
     "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "composite": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "typeRoots": ["node_modules/@types"],
     "plugins": [
       {
         "name": "next"
       }
     ]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "next.config.js",
-    "test/*"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "next.config.js", "test/*"],
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"

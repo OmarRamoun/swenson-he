@@ -5,14 +5,7 @@
     "project": "./tsconfig.json",
     "tsconfigRootDir": "./"
   },
-  "plugins": [
-    "react",
-    "react-hooks",
-    "@typescript-eslint",
-    "import",
-    "prettier",
-    "@swensonhe"
-  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "import", "prettier", "@swensonhe"],
   "env": {
     "node": true,
     "browser": true,
@@ -29,7 +22,7 @@
     "@swensonhe/jsx-parent-first": "error",
     "@swensonhe/line-between-statements": "error",
 
-    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
+    "no-unused-vars": [1, {"args": "after-used", "argsIgnorePattern": "^_"}],
     "@next/next/no-html-link-for-pages": "off",
     "import/first": "error",
     "arrow-body-style": ["error", "as-needed"],
@@ -106,7 +99,7 @@
     "no-restricted-imports": [
       "error",
       {
-        "patterns": ["@components/*/*"]
+        "patterns": ["@components/*/*", "@lib/*/*"]
       }
     ],
     "react/no-inline-styles": "off",
@@ -226,11 +219,7 @@
     {
       "files": ["*.ts", "*.tsx"],
       "plugins": ["@typescript-eslint/eslint-plugin"],
-      "extends": [
-        "airbnb-base",
-        "eslint:recommended",
-        "plugin:import/recommended"
-      ],
+      "extends": ["airbnb-base", "eslint:recommended", "plugin:import/recommended"],
       "rules": {
         "import/extensions": [
           "error",
