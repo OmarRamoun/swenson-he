@@ -1,5 +1,5 @@
 {
-  "name": "via",
+  "name": "swenson-he",
   "version": "0.0.9",
   "private": true,
   "npmClient": "yarn",
@@ -10,50 +10,40 @@
   },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
-    "build": "git diff --quiet HEAD origin/main -- src || next build",
+    "build": "next build",
     "start": "next start",
-    "type-check": "tsc --noEmit",
-    "lint": "eslint --max-warnings=0 . --ext=.ts,.tsx,.js,.jsx",
-    "lint:fix": "eslint --max-warnings=0 --fix . --ext=.ts,.tsx,.js,.jsx",
+    "type-check": "tsc -p tsconfig.json --noEmit",
+    "lint": "next lint --max-warnings=0 . --ext=.ts,.tsx",
+    "lint:fix": "yarn lint --fix",
     "tsprune": "yarn ts-prune -e -i '(assets|server|public|src/index.ts|components/src/index.ts)'",
     "tsprune:all": "yarn ts-prune -e -i",
+    "pre-commit": "lint-staged",
+    "pre-push": "git diff --quiet HEAD origin/main -- src || yarn build",
     "prepare": "husky install"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "googleapis": "^118.0.0",
-    "next": "^12.3.4",
-    "pg": "^8.10.0",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "react-query": "^3.5.16",
-    "swr": "^2.1.5",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
+    "next": "^13.4.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "^5.0.4",
+    "swr": "^2.1.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@eslint-recommended/eslint-config": "^10.0.0",
     "@next/eslint-plugin-next": "^13.4.2",
-    "@svgr/cli": "^5.5.0",
-    "@testing-library/react": "^11.2.3",
-    "@testing-library/react-hooks": "^5.0.0",
-    "@types/express": "^4.17.17",
-    "@types/node": "^14.14.13",
-    "@types/nodemailer": "^6.4.7",
-    "@types/pg": "^8.6.6",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@types/styled-components": "^5.1.26",
-    "@typescript-eslint/eslint-plugin": "^5.59.5",
-    "@typescript-eslint/parser": "^5.59.5",
     "@typescript-eslint/types": "^5.59.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/utils": "^5.48.1",
+    "@typescript-eslint/parser": "^5.59.8",
     "@via/eslint-plugin": "file:eslint-plugin/lib",
-    "autoprefixer": "^10.4.14",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
     "babel-eslint": "^10.1.0",
-    "prettier": "^2.2.1",
-    "eslint": "^7.15.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "prettier": "^2.8.8",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-next": "^13.4.1",
@@ -66,15 +56,14 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
     "lint-staged": "^10.5.3",
     "ts-prune": "^0.10.3",
-    "nodemailer": "^6.9.1"
+    "cross-env": "^7.0.3"
   },
   "resolutions": {
-    "@types/react": "18.0.0",
-    "@types/react-dom": "18.0.0",
-    "@types/styled-components": "^5.1.26"
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -83,7 +72,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }

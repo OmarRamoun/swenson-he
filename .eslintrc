@@ -10,9 +10,8 @@
     "react-hooks",
     "@typescript-eslint",
     "import",
-    "tailwindcss",
     "prettier",
-    "@via"
+    "@swensonhe"
   ],
   "env": {
     "node": true,
@@ -20,9 +19,9 @@
     "amd": true
   },
   "rules": {
-    "@via/exports-last": "error",
-    "@via/file-naming": "error",
-    "@via/jsx-new-line": [
+    "@swensonhe/exports-last": "error",
+    "@swensonhe/file-naming": "error",
+    "@swensonhe/jsx-new-line": [
       "error",
       {
         "ignore-el": [
@@ -30,11 +29,11 @@
         ]
       }
     ],
-    "@via/jsx-parent-first": "error",
-    "@via/line-between-statements": "error",
+    "@swensonhe/jsx-parent-first": "error",
+    "@swensonhe/line-between-statements": "error",
+
     "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
     "@next/next/no-html-link-for-pages": "off",
-    "tailwindcss/no-custom-classname": "off",
     "import/first": "error",
     "import/no-cycle": [
       "error"
