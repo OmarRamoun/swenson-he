@@ -32,7 +32,6 @@
     "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
     "@next/next/no-html-link-for-pages": "off",
     "import/first": "error",
-    "import/no-cycle": ["error"],
     "arrow-body-style": ["error", "as-needed"],
     "camelcase": "warn",
     "react/no-unused-prop-types": "off",
@@ -103,6 +102,13 @@
     ],
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
+    "import/no-cycle": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@components/*/*"]
+      }
+    ],
     "react/no-inline-styles": "off",
     "no-use-before-define": "error",
     "@typescript-eslint/no-use-before-define": ["error"],

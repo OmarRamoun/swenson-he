@@ -17,6 +17,9 @@
     "lint:fix": "yarn lint --fix",
     "tsprune": "yarn ts-prune -e -i '(assets|server|public|src/index.ts|components/src/index.ts)'",
     "tsprune:all": "yarn ts-prune -e -i",
+    "format": "prettier \"**/*.+(json|ts|tsx)\"",
+    "format:check": "npm run prettier -- --check",
+    "format:fix": "npm run prettier -- --write",
     "pre-commit": "lint-staged",
     "pre-push": "git diff --quiet HEAD origin/main -- src || yarn build",
     "prepare": "husky install"

@@ -7,7 +7,7 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({children}) => (
   <div>
     <main>
-      <h2>test</h2>
+      <h2>staff</h2>
       {children}
     </main>
   </div>
