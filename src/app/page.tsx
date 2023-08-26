@@ -1,8 +1,9 @@
 import {Button} from '@components';
+import styles from './home.module.css';
 
 const Home = () => (
   <div>
-    <Button>Click Me</Button>
+    <Button className={styles.button}>Click Me</Button>
   </div>
 );
 
