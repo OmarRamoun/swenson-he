@@ -2,17 +2,25 @@
   /* Font Family */
   --ff-open-sans: 'Open Sans', sans-serif;
   --ff-avenir: Avenir, arial, sans-serif;
+  --ff-avenir-lt: 'Avenir LT Pro', arial, sans-serif;
+  --ff-avenir-heavy: "Avenir Heavy", arial, sans-serif;
+  --ff-nunito: 'Nunito Sans', sans-serif;
 
   /* font sizes */
-  --fs-base: 16px;
   --fs-perc: 62.5%;
-
   --fs-xsm: 1.2rem;
   --fs-sm: 1.4rem;
   --fs-body: 1rem;
+  --fs-btn: 1.6rem;
   --fs-lg: 2.2rem;
   --fs-xlg: 2.8rem;
   --fs-xxlg: 3.6rem;
+
+  /* font styles */
+  --fst-normal: normal;
+
+  /* font weights */
+  --fw-black: 900;
 
   /* radius */
   --rad-sm: 0.5rem;
@@ -42,12 +50,16 @@
   --btn-height-medium: 4.4rem;
   --btn-height-large: 4.7rem;
 
+  /* button width */
+  --btn-min-width: 32rem;
+
   /* z-index */
   --zid-modal: 20,
 
   /* colors */
   --col-clear: #0000;
   --col-bg: #faf9f8;
+  --col-white: #fff;
   --col-black: #000;
   --col-black-hover: rgba(0, 0, 0, 0.35);
   --col-mid-gray: #747474;
