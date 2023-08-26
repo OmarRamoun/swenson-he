@@ -1,0 +1,59 @@
+:root {
+  /* Font Family */
+  --ff-open-sans: 'Open Sans', sans-serif;
+  --ff-avenir: Avenir, arial, sans-serif;
+
+  /* font sizes */
+  --fs-base: 16px;
+  --fs-perc: 62.5%;
+
+  --fs-xsm: 1.2rem;
+  --fs-sm: 1.4rem;
+  --fs-body: 1rem;
+  --fs-lg: 2.2rem;
+  --fs-xlg: 2.8rem;
+  --fs-xxlg: 3.6rem;
+
+  /* radius */
+  --rad-sm: 0.5rem;
+  --rad-md: 0.4rem;
+  --rad-lg: 1.2rem;
+  --rad-xlg: 2rem;
+
+  /* Navbar */
+  --nav-padding-horizontal: 2.5rem;
+  --nav-padding-vertical: 2rem;
+
+  /* modal width */
+  --mdl-width: 4.5rem;
+  --mdl-small-width: 3.4rem;
+  --mdl-large-width: 6.65rem;
+
+  /* modal height */
+  --mdl-height: 2.5rem;
+  --mdl-small-height: 20rem;
+  --mdl-large-height: 75rem;
+
+  /* modal padding */
+  --mdl-padding: 1.5rem;
+
+  /* button height */
+  --btn-height-small: 3.2rem;
+  --btn-height-medium: 4.4rem;
+  --btn-height-large: 4.7rem;
+
+  /* z-index */
+  --zid-modal: 20,
+
+  /* colors */
+  --col-clear: #0000;
+  --col-bg: #faf9f8;
+  --col-black: #000;
+  --col-black-hover: rgba(0, 0, 0, 0.35);
+  --col-mid-gray: #747474;
+  --col-dark-gray: #616161;
+  --col-gray: #dfdacc;
+  --col-blue: #5da3a9;
+  --col-blue-light: #86c6cc;
+}
+

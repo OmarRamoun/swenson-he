@@ -1,1 +1,15 @@
+@import url('https://fonts.cdnfonts.com/css/avenir');
 
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+:root {
+  font-size: var(--fs-main);
+}
+
+body {
+  font-family: var(--ff-open-sans);
+}
