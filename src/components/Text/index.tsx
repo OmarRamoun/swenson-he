@@ -1,5 +1,6 @@
 import type {FC} from 'react';
 import {cn} from '@lib';
+
 import styles from './text.module.css';
 
 interface TextProps {

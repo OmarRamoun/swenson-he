@@ -1,0 +1,19 @@
+.image {
+  width: 100%;
+  height: var(--crd-img-height);
+}
+
+.card {
+  flex-direction: column;
+  background-color: var(--col-white);
+  min-height: var(--crd-min-height-sm);
+  width: var(--crd-width-sm);
+  border: var(--crd-border);
+  border-radius: var(--rad-md);
+  transition: var(--tran-default);
+}
+
+.card:hover {
+  box-shadow: var(--crd-shadow);
+  cursor: pointer;
+}
