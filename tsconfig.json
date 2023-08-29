@@ -19,30 +19,29 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@pages": ["src/pages"],
-      "@pages/*": ["src/pages/*"],
+      "@assets": ["src/assets"],
+      "@assets/*": ["src/assets/*"],
       "@layouts": ["src/layouts"],
       "@layouts/*": ["src/layouts/*"],
       "@components": ["src/components"],
       "@components/*": ["src/components/*"],
+      "@hooks": ["src/hooks"],
+      "@hooks/*": ["src/hooks/*"],
+      "@screens": ["src/screens"],
+      "@screens/*": ["src/screens/*"],
       "@constants": ["src/constants"],
       "@constants/*": ["src/constants/*"],
-      "@context": ["src/context"],
-      "@context/*": ["src/context/*"],
-      "@definitions": ["src/definitions"],
-      "@definitions/*": ["src/definitions/*"],
       "@interfaces": ["src/interfaces"],
       "@interfaces/*": ["src/interfaces/*"],
       "@styles": ["src/styles"],
       "@styles/*": ["src/styles/*"],
       "@lib": ["src/lib"],
       "@lib/*": ["src/lib/*"],
-      "@public": ["public"],
-      "@public/*": ["public/*"],
-      "@test": ["test"],
-      "@test/*": ["test/*"],
+      "@state": ["src/state"],
+      "@state/*": ["src/state/*"],
       "@shared": ["shared/index.ts"],
-      "@utils": ["utils/index.ts"],
+      "@utils": ["src/utils"],
+      "@utils/*": ["src/utils/*"],
       "next-env.d.ts": ["next-env.d.ts"]
     },
     "incremental": true,
@@ -57,7 +56,7 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "**/assets/data/*.json"],
   "exclude": ["node_modules", "next.config.js", "test/*"],
   "ts-node": {
     "compilerOptions": {
@@ -65,3 +64,4 @@
     }
   }
 }
+
