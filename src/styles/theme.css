@@ -3,7 +3,7 @@
   --ff-open-sans: 'Open Sans', sans-serif;
   --ff-avenir: Avenir, arial, sans-serif;
   --ff-avenir-lt: 'Avenir LT Pro', arial, sans-serif;
-  --ff-avenir-heavy: "Avenir Heavy", arial, sans-serif;
+  --ff-avenir-heavy: 'Avenir Heavy', arial, sans-serif;
   --ff-nunito: 'Nunito Sans', sans-serif;
 
   /* font sizes */
@@ -14,33 +14,53 @@
   --fs-btn: 1.6rem;
   --fs-lg: 2.2rem;
   --fs-xlg: 2.8rem;
-  --fs-xxlg: 3.6rem;
+  --fs-xxlg: 3.7rem;
 
   /* font styles */
   --fst-normal: normal;
 
   /* font weights */
   --fw-black: 900;
+  --fw-bold: 800;
+  --fw-normal: 500;
 
-  /* radius */
-  --rad-sm: 0.5rem;
-  --rad-md: 0.4rem;
+  /* line heights */
+  --lh-normal: normal;
+
+  /* paddings */
+  --pad-home: 1.7rem;
+
+  /* border radius */
+  --rad-sm: 0.4rem;
+  --rad-md: 0.5rem;
   --rad-lg: 1.2rem;
   --rad-xlg: 2rem;
+  --rad-round: 50%;
 
   /* Navbar */
   --nav-padding-horizontal: 2.5rem;
   --nav-padding-vertical: 2rem;
 
-  /* modal width */
+  /* Card */
+  --crd-img-height: 10.4rem;
+  --crd-min-height-sm: 14.9rem;
+  --crd-width-sm: 16.2rem;
+  --crd-min-height-lg: 17.9rem;
+  --crd-width-lg: 17.7rem;
+  --crd-border: 0.1rem solid var(--col-gray);
+  --crd-shadow: 0px 0.2rem 1rem 0px var(--col-light-black);
+
+  /* mdal width */
   --mdl-width: 4.5rem;
   --mdl-small-width: 3.4rem;
   --mdl-large-width: 6.65rem;
+  --mdl-vw: 70vw;
 
   /* modal height */
   --mdl-height: 2.5rem;
   --mdl-small-height: 20rem;
   --mdl-large-height: 75rem;
+  --mdl-vh: 80vh;
 
   /* modal padding */
   --mdl-padding: 1.5rem;
@@ -51,10 +71,13 @@
   --btn-height-large: 4.7rem;
 
   /* button width */
-  --btn-min-width: 32rem;
+  --btn-min-width: 100%;
 
   /* z-index */
-  --zid-modal: 20,
+  --zid-modal: 20;
+
+  /* transitions */
+  --tran-default: all 0.4s ease;
 
   /* colors */
   --col-clear: #0000;
@@ -62,10 +85,12 @@
   --col-white: #fff;
   --col-black: #000;
   --col-black-hover: rgba(0, 0, 0, 0.35);
+  --col-black-subtle: rgba(0, 0, 0, 0.7);
   --col-mid-gray: #747474;
   --col-dark-gray: #616161;
   --col-gray: #dfdacc;
   --col-blue: #5da3a9;
+  --col-blue-hover: #5da3a997;
   --col-blue-light: #86c6cc;
+  --col-light-black: #0003;
 }
-
