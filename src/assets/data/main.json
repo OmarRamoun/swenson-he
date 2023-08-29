@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Staff",
+    "image": "staff",
+    "slug": "./staff"
+  },
+  {
+    "title": "Decorations",
+    "image": "decorations",
+    "slug": "./decorations"
+  },
+  {
+    "title": "Drinks",
+    "image": "drinks",
+    "slug": "./drinks"
+  },
+  {
+    "title": "Food",
+    "image": "food",
+    "slug": "./food"
+  }
+]
