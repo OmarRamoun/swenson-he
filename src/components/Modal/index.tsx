@@ -1,10 +1,10 @@
 import type {FC} from 'react';
 import {useEffect} from 'react';
 
-import {motion} from 'framer-motion';
-
 import {Cross} from '@assets/svgs';
-import {cn} from '@lib';
+import {motion, cn} from '@lib';
+
+import {Center} from '../Center';
 
 import styles from './modal.module.css';
 
@@ -14,6 +14,8 @@ interface ModalProps {
   show: boolean;
   onClose: () => void;
 }
+
+const CenterMotion = motion(Center);
 
 const Modal: FC<ModalProps> = ({children, className, show, onClose}) => {
   useEffect(() => {
@@ -29,7 +31,7 @@ const Modal: FC<ModalProps> = ({children, className, show, onClose}) => {
   return (
     <>
       {show ? (
-        <motion.div
+        <CenterMotion
           className={styles.modal_bg}
           onClick={(event) => {
             if (event.currentTarget === event.target) {
@@ -51,7 +53,7 @@ const Modal: FC<ModalProps> = ({children, className, show, onClose}) => {
 
             {children}
           </motion.div>
-        </motion.div>
+        </CenterMotion>
       ) : null}
     </>
   );
