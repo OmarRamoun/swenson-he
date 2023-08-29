@@ -1,15 +1,16 @@
-import type {FC} from 'react';
+import type {FC, HTMLAttributes} from 'react';
+
 import {cn} from '@lib';
+
 import styles from './flex.module.css';
 
-interface FlexProps {
+export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
-  onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
-const Flex: FC<FlexProps> = ({children, className, onClick}) => (
-  <div className={cn(styles.flex, className)} onClick={onClick}>
+const Flex: FC<FlexProps> = ({children, className, ...props}) => (
+  <div className={cn(styles.flex, className)} {...props}>
     {children}
   </div>
 );

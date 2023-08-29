@@ -2,20 +2,25 @@ import type {FC} from 'react';
 
 import {cn} from '@lib';
 
+import {Center} from '../Center';
+import type {FlexProps} from '../Flex';
 import {Flex} from '../Flex';
 import {Image} from '../Image';
+
 import styles from './card.module.css';
 
-interface CardProps {
+export interface CardProps extends FlexProps {
   children: React.ReactNode;
   className?: string;
   src: string;
-  onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+  icon?: React.ReactNode;
 }
 
-const Card: FC<CardProps> = ({children, className, src, onClick}) => (
-  <Flex className={cn(styles.card, className)} onClick={onClick}>
-    <Image className={styles.image} src={src} alt="card thumbnail" w="162" h="104" sizes="16rem" />
+const Card: FC<CardProps> = ({children, className, src, icon, ...props}) => (
+  <Flex className={cn(styles.card, className)} {...props}>
+    <Center className={styles.icon_wrapper}>{icon ?? null}</Center>
+
+    <Image className={styles.image} src={src} alt="card thumbnail" width="162" height="104" sizes="16rem" />
 
     {children}
   </Flex>

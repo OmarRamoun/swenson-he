@@ -1,9 +1,16 @@
+.icon_wrapper {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
 .image {
   width: 100%;
   height: var(--crd-img-height);
 }
 
 .card {
+  position: relative;
   flex-direction: column;
   background-color: var(--col-white);
   min-height: var(--crd-min-height-sm);

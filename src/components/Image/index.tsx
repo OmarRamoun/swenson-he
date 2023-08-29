@@ -1,33 +1,18 @@
-import {cn} from '@lib';
 import type {FC} from 'react';
+
+import type {ImageProps as NextImageProps} from 'next/image';
 import NextImage from 'next/image';
-import type {PlaceholderValue} from 'next/dist/shared/lib/get-img-props';
+
+import {cn} from '@lib';
+
 import styles from './image.module.css';
 
-interface ImageProps {
+interface ImageProps extends NextImageProps {
   className?: string;
-  src: string;
-  alt: string;
-  w: number | `${number}`;
-  h: number | `${number}`;
-  sizes?: string;
-  placeholder?: PlaceholderValue;
-  fill?: boolean;
-  priority?: boolean;
 }
 
-const Image: FC<ImageProps> = ({className, src, w, h, alt, fill, sizes, placeholder, priority}) => (
-  <NextImage
-    className={cn(styles.image, className)}
-    width={w}
-    height={h}
-    src={src}
-    alt={alt}
-    fill={fill}
-    sizes={sizes}
-    placeholder={placeholder}
-    priority={priority}
-  />
+const Image: FC<ImageProps> = ({className, ...props}) => (
+  <NextImage className={cn(styles.image, className)} {...props} />
 );
 
 export {Image};

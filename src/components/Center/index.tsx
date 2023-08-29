@@ -1,17 +1,21 @@
 import type {FC} from 'react';
+
 import {cn} from '@lib';
+
+import type {FlexProps} from '../Flex';
+import {Flex} from '../Flex';
+
 import styles from './center.module.css';
 
-interface CenterProps {
+export interface CenterProps extends FlexProps {
   children: React.ReactNode;
   className?: string;
-  onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 }
 
-const Center: FC<CenterProps> = ({children, className, onClick}) => (
-  <div className={cn(styles.center, className)} onClick={onClick}>
+const Center: FC<CenterProps> = ({children, className, ...props}) => (
+  <Flex className={cn(styles.center, className)} {...props}>
     {children}
-  </div>
+  </Flex>
 );
 
 export {Center};

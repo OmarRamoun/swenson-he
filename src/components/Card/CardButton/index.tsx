@@ -1,16 +1,17 @@
-import {cn} from '@lib';
 import type {FC} from 'react';
+
+import {cn} from '@lib';
+
+import type {BoxProps} from '../../Box';
 import {Box} from '../../Box';
 import {Center} from '../../Center';
+
 import styles from './cardButton.module.css';
 
-interface CardButtonProps {
-  children: React.ReactNode;
-  className?: string;
-}
+export type CardButtonProps = BoxProps;
 
-const CardButton: FC<CardButtonProps> = ({children, className}) => (
-  <Box className={cn(styles.card, className)}>
+const CardButton: FC<CardButtonProps> = ({children, className, ...props}) => (
+  <Box className={cn(styles.card, className)} {...props}>
     <Center>{children}</Center>
   </Box>
 );
