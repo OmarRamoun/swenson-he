@@ -99,7 +99,7 @@
     "no-restricted-imports": [
       "error",
       {
-        "patterns": ["@components/*/*", "@lib/*/*"]
+        "patterns": ["@components/*/*", "@lib/*/*", "@assets/*/*", "@layouts/*/*", "@redux/*/*"]
       }
     ],
     "react/no-inline-styles": "off",
@@ -116,7 +116,7 @@
     "max-len": [
       "warn",
       {
-        "code": 100
+        "code": 120
       }
     ],
     "react-hooks/rules-of-hooks": "error",
@@ -132,7 +132,7 @@
       {
         "semi": true,
         "trailingComma": "all",
-        "printWidth": 110,
+        "printWidth": 120,
         "bracketSpacing": false,
         "singleQuote": true,
         "arrowParens": "always",
