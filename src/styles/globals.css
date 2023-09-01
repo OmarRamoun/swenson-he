@@ -15,4 +15,6 @@
 
 body {
   font-family: var(--ff-nunito);
+  height: 100%;
+  background-color: var(--col-bg);
 }

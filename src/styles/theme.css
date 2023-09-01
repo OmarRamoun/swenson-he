@@ -1,4 +1,7 @@
 :root {
+  /* media quireies */
+  --desktop-width: 768px; /* min-width of desktop */
+
   /* Font Family */
   --ff-open-sans: 'Open Sans', sans-serif;
   --ff-avenir: Avenir, arial, sans-serif;
@@ -8,13 +11,15 @@
 
   /* font sizes */
   --fs-perc: 62.5%;
+  --fs-body: 1rem;
   --fs-xsm: 1.2rem;
   --fs-sm: 1.4rem;
-  --fs-body: 1rem;
   --fs-btn: 1.6rem;
+  --fs-title: 1.8rem;
   --fs-lg: 2.2rem;
   --fs-xlg: 2.8rem;
-  --fs-xxlg: 3.7rem;
+  --fs-xxlg: 3.3rem;
+  --fs-xxxlg: 3.7rem;
 
   /* font styles */
   --fst-normal: normal;
@@ -26,9 +31,13 @@
 
   /* line heights */
   --lh-normal: normal;
+  --lh-desc: 2.2rem;
 
   /* paddings */
   --pad-home: 1.7rem;
+  --pad-btn-sm: 0.5rem;
+  --pad-btn-md: 1.2rem;
+  --pad-btn-lg: 2rem;
 
   /* border radius */
   --rad-sm: 0.4rem;
@@ -41,14 +50,21 @@
   --nav-padding-horizontal: 2.5rem;
   --nav-padding-vertical: 2rem;
 
+  /* Tab */
+  --tab-height-sm: 3.2rem;
+  --tab-height-lg: 4.1rem;
+
   /* Card */
   --crd-img-height: 10.4rem;
   --crd-min-height-sm: 14.9rem;
   --crd-width-sm: 16.2rem;
   --crd-min-height-lg: 17.9rem;
+  --crd-max-height-lg: 18rem;
   --crd-width-lg: 17.7rem;
   --crd-border: 0.1rem solid var(--col-gray);
-  --crd-shadow: 0px 0.2rem 1rem 0px var(--col-light-black);
+  --crd-shadow: 0 0.2rem 1rem 0 var(--col-light-black);
+  --crd-lift: 0 -3px 4px 0 var(--col-black-light);
+  --crd-define: 0 0 4px 0 var(--col-black-light);
 
   /* mdal width */
   --mdl-width: 4.5rem;
@@ -74,7 +90,9 @@
   --btn-min-width: 100%;
 
   /* z-index */
-  --zid-modal: 20;
+  --zid-estimation: 20;
+  --zid-nav: 25;
+  --zid-modal: 30;
 
   /* transitions */
   --tran-default: all 0.4s ease;
@@ -83,14 +101,18 @@
   --col-clear: #0000;
   --col-bg: #faf9f8;
   --col-white: #fff;
+  --col-off-white: rgba(255, 255, 255, 0.6);
   --col-black: #000;
   --col-black-hover: rgba(0, 0, 0, 0.35);
   --col-black-subtle: rgba(0, 0, 0, 0.7);
+  --col-black-light: rgba(0, 0, 0, 0.2);
   --col-mid-gray: #747474;
   --col-dark-gray: #616161;
   --col-gray: #dfdacc;
   --col-blue: #5da3a9;
+  --col-red: #a95d5d;
   --col-blue-hover: #5da3a997;
+  --col-red-hover: #a95d5d97;
   --col-blue-light: #86c6cc;
   --col-light-black: #0003;
 }
