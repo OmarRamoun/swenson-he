@@ -1,0 +1,6 @@
+.container {
+  background-color: var(--col-bg);
+  min-height: 100%;
+  padding: var(--pad-home);
+  flex-direction: column;
+}
