@@ -1,10 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit';
 
+import savedReducer from '../slices/saved';
 import selectedReducer from '../slices/selected';
 
 const store = configureStore({
   reducer: {
     selected: selectedReducer,
+    saved: savedReducer,
   },
 });
 

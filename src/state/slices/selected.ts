@@ -1,18 +1,16 @@
 import type {PayloadAction} from '@reduxjs/toolkit';
 import {createSlice} from '@reduxjs/toolkit';
 
+import type {RemovedItem, SelectedItemsProps} from '@types';
 import {getItem, setItem} from '@utils/storage';
 
-interface SelectedItemProps {
-  id: number;
-  avgBudget: number;
-}
+import {removeItemFromArray, updateSelectedArray} from '../helpers';
 
-const initialValue: SelectedItemProps[] = [];
+const initialValue: SelectedItemsProps[] = [];
 
 const selectedData = getItem('selected');
-const storage: SelectedItemProps[] = selectedData ? JSON.parse(selectedData) : null;
-const setStorage = (value: SelectedItemProps[]) => setItem('selected', JSON.stringify(value));
+const storage: SelectedItemsProps[] = selectedData ? JSON.parse(selectedData) : null;
+const setStorage = (value: SelectedItemsProps[]) => setItem('selected', JSON.stringify(value));
 
 const selectedSlice = createSlice({
   name: 'selected',
@@ -20,18 +18,18 @@ const selectedSlice = createSlice({
     value: storage || initialValue,
   },
   reducers: {
-    add: (state, action: PayloadAction<SelectedItemProps>) => {
+    addToSelected: (state, action: PayloadAction<SelectedItemsProps>) => {
       // eslint-disable-next-line
-      state.value = [...state.value, action.payload];
+      state.value = updateSelectedArray(state.value, action.payload);
       setStorage(state.value);
     },
-    remove: (state, action: PayloadAction<number>) => {
+    removeFromSelected: (state, action: PayloadAction<RemovedItem>) => {
       const itemIdToRemove = action.payload;
       // eslint-disable-next-line
-      state.value = state.value.filter((item) => item.id !== itemIdToRemove);
+      state.value = removeItemFromArray(state.value, itemIdToRemove);
       setStorage(state.value);
     },
-    clear: (state) => {
+    clearSelected: (state) => {
       // eslint-disable-next-line
       state.value = [];
       setStorage(state.value);
@@ -39,7 +37,7 @@ const selectedSlice = createSlice({
   },
 });
 
-const {add, remove, clear} = selectedSlice.actions;
-export {selectedSlice, add, remove, clear};
+const {addToSelected, removeFromSelected, clearSelected} = selectedSlice.actions;
+export {selectedSlice, addToSelected, removeFromSelected, clearSelected};
 
 export default selectedSlice.reducer;
