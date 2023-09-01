@@ -1,34 +1,63 @@
+[![](https://img.shields.io/static/v1?label=BY&message=RAMOUN&color=birghtgreen)](https://ramoun.me)
+
+![React](https://img.shields.io/badge/-React-1f1f1f?logo=react&logoColor=61DAFB&style=for-the-badge)
+![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+![Next](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+
 # Swenson He
 
-        /* setChecked((prevState) => { */
-        /*   if (prevState) { */
-        /*     dispatch(remove(id)); */
-        /*   } else { */
-        /*     console.log(avgBudget); */
-        /*     dispatch(add({id, avgBudget})); */
-        /*   } */
-        /*   return !prevState; */
-        /* setChecked(!checked); */
-        /**/
-        /* if (checked) { */
-        /*   dispatch(add({id, avgBudget})); */
-        /*   console.log(avgBudget); */
-        /* } else { */
-        /*   dispatch(remove(id)); */
-        /* } */
+> A sample screen from the Event Building Inc. web application that allows the user to select the task they want. All tasks are categorized under different categories like (Staff, Food, Catering ..etc). As such, the user selects a category and should be able to see all the items under this category. Each item in the category may be included in multiple categories, and other items will only be included in one category.
 
-/\*
+## A Screenshot of the Homepage
 
-    "@eslint-recommended/eslint-config": "^10.0.0",
-    "@next/eslint-plugin-next": "^13.4.2",
-    "@typescript-eslint/types": "^5.59.5",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/preset-typescript": "^7.18.6",
-    "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-standard-with-typescript": "^23.0.0",
-    "eslint-import-resolver-typescript": "^3.5.2",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-promise": "^6.0.0",
-    "prettier-eslint": "^15.0.1",
+![screenshot](screenshots/screenshot.png)
 
-\*/
+## Collective Screenshots of the Mobile Version
+
+<p align="center" justify="center">
+  <img width="180px" height="320px" src="screenshots/screen1.png" />
+  <img width="180px" height="320px" src="screenshots/screen2.png" />
+  <img width="180px" height="320px" src="screenshots/screen3.png" />
+  <img width="180px" height="320px" src="screenshots/screen4.png" />
+</p>
+
+## A Demo for the App
+
+- [Demo](https://swensonhe.omarramoun.com/)
+
+## Built With
+
+- Framework: _**Next.js, Redux, CSS-Modules, Framer Motion**_
+
+## How to run Locally
+
+```sh
+$ git clone https://github.com/OmarRamoun/swenson-he.git
+
+$ yarn install
+
+$ yarn dev
+```
+
+## Author
+
+👤 **Omar Ramoun**
+
+- **GitHub**: [![@omarramoun](https://img.shields.io/github/followers/omarramoun?label=OmarRamoun&style=social)](https://github.com/omarramoun)
+- **Twitter**: [![@omarramoun](https://img.shields.io/twitter/follow/omarramoun?label=OmarRamoun&style=social)](https://twitter.com/omarramoun)
+- **LinkdIn**: [![@omarramoun](https://img.shields.io/github/followers/omarramoun?label=OmarRamoun&logo=linkedin&style=social)](https://www.linkedin.com/in/omarramoun/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- The team behind Synergey Of Serra (Great Guys)
+- My Passion For Programming
