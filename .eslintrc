@@ -201,7 +201,7 @@
           "error",
           {
             "newlines-between": "always",
-            "groups": ["builtin", "external", "internal", "parent", "index", "sibling"],
+            "groups": ["builtin", "external", "internal", "parent", "index", "sibling", "object"],
             "alphabetize": {
               "order": "asc",
               "caseInsensitive": true
@@ -210,6 +210,10 @@
               {
                 "pattern": "react",
                 "group": "builtin"
+              },
+              {
+                "pattern": "**/*.module.css",
+                "group": "object"
               }
             ],
             "pathGroupsExcludedImportTypes": []

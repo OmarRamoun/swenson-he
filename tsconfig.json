@@ -39,6 +39,8 @@
       "@lib/*": ["src/lib/*"],
       "@state": ["src/state"],
       "@state/*": ["src/state/*"],
+      "@types": ["src/types"],
+      "@types/*": ["src/types/*"],
       "@shared": ["shared/index.ts"],
       "@utils": ["src/utils"],
       "@utils/*": ["src/utils/*"],
@@ -64,4 +66,3 @@
     }
   }
 }
-
