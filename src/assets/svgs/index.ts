@@ -4,3 +4,4 @@ export {default as Check} from './check.svg';
 export {default as Cross} from './cross.svg';
 export {default as Plus} from './plus.svg';
 export {default as Star} from './star.svg';
+export {default as Burger} from './burger.svg';
