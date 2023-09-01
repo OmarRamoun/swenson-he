@@ -1,6 +1,10 @@
+'use client';
+
 import type {FC} from 'react';
 
-import {motion, cn} from '@lib';
+import {motion} from 'framer-motion';
+
+import {cn} from '@lib';
 
 import {Center} from '../Center';
 

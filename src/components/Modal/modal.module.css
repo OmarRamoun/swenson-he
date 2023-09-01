@@ -18,14 +18,20 @@
   padding: var(--mdl-padding);
 }
 
-.modal_close {
+.close_container {
   position: absolute;
-  top: 3rem;
-  right: 3rem;
+  top: 2rem;
+  right: 2rem;
   border-radius: var(--rad-round);
-  width: 1rem;
-  height: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 1.5rem;
+}
+
+.close_container:hover {
+  cursor: pointer;
+  background-color: var(--col-black-light);
+}
+
+.modal_close {
+  width: 1.1rem;
+  height: 1.1rem;
 }

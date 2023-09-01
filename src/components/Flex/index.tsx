@@ -5,7 +5,7 @@ import {cn} from '@lib';
 import styles from './flex.module.css';
 
 export interface FlexProps extends HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 

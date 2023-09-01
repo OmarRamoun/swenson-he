@@ -2,21 +2,77 @@
   /* reset */
   border: none;
 
-  background: var(--col-blue);
-  height: var(--btn-height-large);
-  min-width: var(--btn-min-width);
-  border-radius: var(--rad-sm);
   transition: var(--tran-default);
 }
 
 .button:hover {
   cursor: pointer;
-  background: var(--col-blue-hover);
+}
+
+.primary:hover {
+  background-color: var(--col-blue-hover);
+}
+
+.primary.destroy:hover {
+  background-color: var(--col-red-hover);
+}
+
+.secondary:hover {
+  color: var(--col-white);
+  background-color: var(--col-blue-hover);
+}
+
+.secondary.destroy:hover {
+  color: var(--col-white);
+  background-color: var(--col-red-hover);
+}
+
+.primary {
+  color: var(--col-white);
+  background-color: var(--col-blue);
+}
+
+.secondary {
+  color: var(--col-blue);
+  background-color: var(--col-clear);
+}
+
+.primary.destroy {
+  background-color: var(--col-red);
+}
+
+.secondary.destroy {
+  color: var(--col-red);
+}
+
+.sm {
+  border-radius: var(--rad-sm);
+  padding: var(--pad-btn-sm);
+}
+
+.md {
+  border-radius: var(--rad-md);
+  padding: var(--pad-btn-md);
+}
+
+.lg {
+  border-radius: var(--rad-lg);
+  padding: var(--pad-btn-md);
+}
+
+.sm .text {
+  font-weight: var(--fw-bold);
+}
+
+.md .text {
+  font-weight: var(--fw-bold);
+}
+
+.lg .text {
+  font-weight: var(--fw-black);
 }
 
 .text {
-  color: var(--col-white);
   font-size: var(--fs-btn);
   font-style: var(--fst-normal);
-  font-weight: var(--fw-black);
 }

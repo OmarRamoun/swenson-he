@@ -1,8 +1,12 @@
+'use client';
+
 import type {FC} from 'react';
 import {useEffect} from 'react';
 
+import {motion} from 'framer-motion';
+
 import {Cross} from '@assets/svgs';
-import {motion, cn} from '@lib';
+import {cn} from '@lib';
 
 import {Center} from '../Center';
 
@@ -49,7 +53,9 @@ const Modal: FC<ModalProps> = ({children, className, show, onClose}) => {
             exit={{opacity: 0, y: 35}}
             transition={{delay: 0.05}}
           >
-            <Cross className={styles.modal_close} onClick={onClose} />
+            <Center className={styles.close_container} onClick={onClose}>
+              <Cross className={styles.modal_close} />
+            </Center>
 
             {children}
           </motion.div>

@@ -24,3 +24,11 @@
   box-shadow: var(--crd-shadow);
   cursor: pointer;
 }
+
+@media screen and (min-width: 768px) {
+  .card {
+    min-height: var(--crd-min-height-lg);
+    max-height: var(--crd-max-height-lg);
+    width: var(--crd-width-lg);
+  }
+}
