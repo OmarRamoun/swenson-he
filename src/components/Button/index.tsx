@@ -1,4 +1,7 @@
-import type {FC, HTMLAttributes} from 'react';
+import type {FC} from 'react';
+
+import type {HTMLMotionProps} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 import {cn} from '@lib';
 
@@ -6,7 +9,7 @@ import {Text} from '../Text';
 
 import styles from './button.module.css';
 
-export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends HTMLMotionProps<'button'> {
   children: React.ReactNode;
   className?: string;
   type?: 'button' | 'reset' | 'submit';
@@ -23,28 +26,16 @@ const Button: FC<ButtonProps> = ({
   size = 'md',
   destroy = false,
   ...props
-}) => {
-  if (typeof children === 'string') {
-    return (
-      <button
-        className={cn(styles.button, className, styles[variant], styles[size], destroy && styles.destroy)}
-        type={type}
-        {...props}
-      >
-        <Text className={styles.text}>{children}</Text>
-      </button>
-    );
-  }
-
-  return (
-    <button
-      className={cn(styles.button, className, styles[variant], styles[size], destroy && styles.destroy)}
-      type={type}
-      {...props}
-    >
-      {children}
-    </button>
-  );
-};
+}) => (
+  <motion.button
+    className={cn(styles.button, className, styles[variant], styles[size], destroy && styles.destroy)}
+    type={type}
+    whileHover={{scale: [null, 1.2, 1.2]}}
+    transition={{duration: 0.2}}
+    {...props}
+  >
+    {typeof children === 'string' ? <Text className={styles.text}>{children}</Text> : children}
+  </motion.button>
+);
 
 export {Button};

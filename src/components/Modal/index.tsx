@@ -19,8 +19,6 @@ interface ModalProps {
   onClose: () => void;
 }
 
-const CenterMotion = motion(Center);
-
 const Modal: FC<ModalProps> = ({children, className, show, onClose}) => {
   useEffect(() => {
     if (show) {
@@ -35,7 +33,7 @@ const Modal: FC<ModalProps> = ({children, className, show, onClose}) => {
   return (
     <>
       {show ? (
-        <CenterMotion
+        <motion.div
           className={styles.modal_bg}
           onClick={(event) => {
             if (event.currentTarget === event.target) {
@@ -59,7 +57,7 @@ const Modal: FC<ModalProps> = ({children, className, show, onClose}) => {
 
             {children}
           </motion.div>
-        </CenterMotion>
+        </motion.div>
       ) : null}
     </>
   );
