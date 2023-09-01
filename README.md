@@ -15,10 +15,10 @@
 ## Collective Screenshots of the Mobile Version
 
 <p align="center" justify="center">
-  <img width="180px" height="320px" src="screenshots/screen1.png" />
-  <img width="180px" height="320px" src="screenshots/screen2.png" />
-  <img width="180px" height="320px" src="screenshots/screen3.png" />
-  <img width="180px" height="320px" src="screenshots/screen4.png" />
+  <img width="180px" height="320px" src="screenshots/screenshot1.png" />
+  <img width="180px" height="320px" src="screenshots/screenshot2.png" />
+  <img width="180px" height="320px" src="screenshots/screenshot3.png" />
+  <img width="180px" height="320px" src="screenshots/screenshot4.png" />
 </p>
 
 ## A Demo for the App
