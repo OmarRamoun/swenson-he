@@ -5,8 +5,9 @@
 }
 
 .image {
-  width: 100%;
-  height: var(--crd-img-height);
+  width: auto;
+  /* height: var(--crd-img-height); */
+  height: auto;
 }
 
 .card {
