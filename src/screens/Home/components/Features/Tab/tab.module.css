@@ -1,0 +1,36 @@
+.tab {
+  background-color: var(--col-white);
+  border-radius: 2rem;
+  height: var(--tab-height-sm);
+  width: 25%;
+  padding: 0.8rem;
+}
+
+.tab_active {
+  background-color: var(--col-blue);
+}
+
+.tab:hover {
+  cursor: pointer;
+}
+
+.tab_text {
+  font-weight: var(--fw-normal);
+  color: var(--col-black);
+  font-size: var(--fs-body);
+}
+
+.text_active {
+  color: var(--col-white);
+  font-weight: var(--fw-black);
+}
+
+@media screen and (min-width: 768px) {
+  .tab {
+    height: 4.1rem;
+  }
+
+  .tab_text {
+    font-size: var(--fs-sm);
+  }
+}

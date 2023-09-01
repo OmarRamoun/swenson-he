@@ -1,0 +1,24 @@
+.wrapper {
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: var(--rad-xlg);
+  width: 100%;
+}
+
+.tab_container {
+  gap: 0.4rem;
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+
+.tab_title {
+  color: var(--col-dark-gray);
+  font-size: var(--fs-body);
+  font-size: var(--fs-sm);
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    background-color: var(--col-white);
+  }
+}

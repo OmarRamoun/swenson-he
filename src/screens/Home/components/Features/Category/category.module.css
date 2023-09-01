@@ -1,0 +1,38 @@
+.card_container {
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.card_content {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.card_title {
+  color: var(--col-dark-gray);
+  font-size: var(--fs-sm);
+}
+
+.card_icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.card_price {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+}
+
+@media screen and (min-width: 768px) {
+  .card_container {
+    gap: 2rem;
+    justify-content: flex-start;
+    overflow: auto;
+    max-height: 48rem;
+    padding-bottom: 2rem;
+  }
+}
