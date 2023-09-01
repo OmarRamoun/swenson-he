@@ -1,16 +1,29 @@
+'use client';
+
 import type {FC} from 'react';
 
-interface LayoutProps {
+import {AnimatePresence} from 'framer-motion';
+import {Provider} from 'react-redux';
+
+import {HomeLayout} from '@layouts';
+import {store} from '@state/store';
+
+import '@styles';
+
+interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-const Layout: FC<LayoutProps> = ({children}) => (
-  <div>
-    <main>
-      <h2>test</h2>
-      {children}
-    </main>
-  </div>
+const RootLayout: FC<RootLayoutProps> = ({children}) => (
+  <AnimatePresence>
+    <Provider store={store}>
+      <html lang="en">
+        <body>
+          <HomeLayout>{children}</HomeLayout>
+        </body>
+      </html>
+    </Provider>
+  </AnimatePresence>
 );
 
-export default Layout;
+export default RootLayout;

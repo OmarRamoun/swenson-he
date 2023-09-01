@@ -1,10 +1,11 @@
-import {Button} from '@components';
-import styles from './home.module.css';
+'use client';
 
-const Home = () => (
-  <div>
-    <Button className={styles.button}>Click Me</Button>
-  </div>
+import {HomeScreen} from '@screens';
+
+const RootPage = () => (
+  <>
+    <HomeScreen />
+  </>
 );
 
-export default Home;
+export default RootPage;

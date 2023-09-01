@@ -1,0 +1,24 @@
+.container {
+  font-size: var(--fs-xxxlg);
+  font-weight: var(--fw-black);
+  height: 80vh;
+  flex-direction: column;
+}
+
+.title {
+  font-size: var(--fs-title);
+}
+
+.description {
+  color: var(--col-mid-gray);
+  font-size: var(--fs-sm);
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: var(--fs-xlg);
+  }
+  .description {
+    font-size: var(--fs-xxxlg);
+  }
+}
