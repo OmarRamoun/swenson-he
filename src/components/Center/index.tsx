@@ -1,21 +1,18 @@
-import type {FC} from 'react';
+import type {FC, HTMLAttributes} from 'react';
 
 import {cn} from '@lib';
 
-import type {FlexProps} from '../Flex';
-import {Flex} from '../Flex';
-
 import styles from './center.module.css';
 
-export interface CenterProps extends FlexProps {
+export interface CenterProps extends HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   className?: string;
 }
 
 const Center: FC<CenterProps> = ({children, className, ...props}) => (
-  <Flex className={cn(styles.center, className)} {...props}>
+  <div className={cn(styles.center, className)} {...props}>
     {children}
-  </Flex>
+  </div>
 );
 
 export {Center};
