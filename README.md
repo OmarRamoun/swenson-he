@@ -56,8 +56,3 @@ Feel free to check the [issues page](../../issues).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- The team behind Synergey Of Serra (Great Guys)
-- My Passion For Programming
