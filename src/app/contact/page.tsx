@@ -1,19 +1,25 @@
 'use client';
 
-import {Center, Link, Text} from '@components';
+import {Center, Flex, Link, Text} from '@components';
 
 import styles from './contact.module.css';
 
 const ContactPage = () => (
   <Center className={styles.container}>
-    <Text className={styles.title}>Contact Info:</Text>
+    <Flex>
+      <Text className={styles.title}>Contact Info:</Text>
+    </Flex>
 
     <Link href="https://omarramoun.com/" passHref={true}>
-      <Text className={styles.description}>omarramoun.com</Text>
+      <Flex whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+        <Text className={styles.description}>omarramoun.com</Text>
+      </Flex>
     </Link>
 
     <Link href="mailto:contact@omarramoun.com" passHref={true}>
-      <Text className={styles.description}>contact@omarramoun.com</Text>
+      <Flex whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
+        <Text className={styles.description}>contact@omarramoun.com</Text>
+      </Flex>
     </Link>
   </Center>
 );
