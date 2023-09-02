@@ -29,12 +29,21 @@ const CategorySection: FC<CategoryScreenProps> = ({currentCategory}) => {
   } = useGetData(`categories/${currentCategory?.id}.json`);
 
   return (
-    <Flex className={styles.card_container}>
-      {features?.map((feature) => (
+    <Flex
+      className={styles.card_container}
+      animate={{
+        transition: {
+          delayChildren: 0.3,
+          staggerChildren: 0.2,
+        },
+      }}
+    >
+      {features?.map((feature, idx) => (
         <FeatureCard
           key={`feature-${feature?.id}-${feature?.title}`}
           currentCategory={currentCategory}
           featureItem={feature}
+          idx={idx}
         />
       ))}
 
@@ -44,7 +53,11 @@ const CategorySection: FC<CategoryScreenProps> = ({currentCategory}) => {
   );
 };
 
-const FeatureCard: FC<{featureItem: Item; currentCategory: Category}> = ({featureItem, currentCategory}) => {
+const FeatureCard: FC<{featureItem: Item; currentCategory: Category; idx: number}> = ({
+  featureItem,
+  currentCategory,
+  idx,
+}) => {
   const {id, title, minBudget, maxBudget} = featureItem;
   const {image, ...featureItemClean} = featureItem;
   const {id: categoryId, title: categoryTitle} = currentCategory;
@@ -61,6 +74,10 @@ const FeatureCard: FC<{featureItem: Item; currentCategory: Category}> = ({featur
       className={styles.card}
       src={image || blur.src}
       icon={isSelected ? <Check className={styles.card_icon} /> : <Plus className={styles.card_icon} />}
+      initial={{opacity: 0}}
+      animate={{opacity: 1, transition: {delay: 0.1 * idx}}}
+      transition={{duration: 0.008}}
+      whileTap={{scale: 0.9}}
       onClick={() => {
         if (!isSelected) {
           dispatch(

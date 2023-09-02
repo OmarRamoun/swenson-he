@@ -28,9 +28,19 @@
 @media screen and (min-width: 768px) {
   .tab {
     height: 4.1rem;
+    background-color: var(--col-bg);
   }
 
   .tab_text {
     font-size: var(--fs-sm);
+    color: var(--col-black);
+  }
+
+  .tab_active {
+    background-color: var(--col-blue);
+  }
+
+  .text_active {
+    color: var(--col-white);
   }
 }

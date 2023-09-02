@@ -67,11 +67,30 @@ const Estimation = () => {
         <Flex className={styles.price_container}>
           {isLargeScreen
             ? selectedArray.map((category) => (
-                <Flex key={`category-${category.title}-${category.id}`} className={styles.price_item}>
+                <Flex
+                  key={`category-${category.title}-${category.id}`}
+                  className={styles.price_item}
+                  initial={{opacity: 0}}
+                  animate={{
+                    opacity: 1,
+                    transition: {
+                      delayChildren: 0.3,
+                      staggerChildren: 0.2,
+                    },
+                  }}
+                >
                   <Text className={styles.price_item_text}>{category.title}</Text>
 
                   {category.items.map((items) => (
-                    <Flex key={`item-${items.title}-${items.id}`} className={styles.price_subitem}>
+                    <Flex
+                      key={`item-${items.title}-${items.id}`}
+                      className={styles.price_subitem}
+                      initial={{y: 20, opacity: 0}}
+                      animate={{
+                        y: 0,
+                        opacity: 1,
+                      }}
+                    >
                       <Text className={styles.price_subitem_text}>{items.title}</Text>
 
                       <Text className={styles.price_subitem_price}>
