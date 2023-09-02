@@ -31,7 +31,14 @@ const SavedItemModal: FC<{savedItem: SavedItem}> = ({savedItem}) => {
 
   return (
     <>
-      <Flex className={styles.container} onClick={() => setShowModal(true)}>
+      <Flex
+        className={styles.container}
+        onClick={() => setShowModal(true)}
+        initial={{opacity: 0, y: 40, boxShadow: '0 0 0 0 var(--col-clear)'}}
+        whileHover={{boxShadow: '0 0.2rem 1rem 0 var(--col-light-black)'}}
+        whileTap={{scale: 0.99}}
+        whileInView={{opacity: 1, y: 0, transition: {delay: 0.1, type: 'spring'}}}
+      >
         <Text className={styles.title}>${formatPrice(savedItem.total)}</Text>
       </Flex>
 
@@ -44,15 +51,11 @@ const SavedItemModal: FC<{savedItem: SavedItem}> = ({savedItem}) => {
               <Flex key={`item-${category.title}-${category.id}`} className={styles.price_category}>
                 <Text className={styles.category_title}>{category.title}</Text>
 
-                {/* <Text className={styles.price_subitem_price}> */}
-                {/* ${formatPrice(items.)} - {formatPrice(items.maxBudget)} */}
-                {/* </Text> */}
-
                 {category.items.map((feature) => (
                   <Flex key={`feature-${feature.title}-${feature.id}`} className={styles.feature}>
                     <Text>{feature.title}</Text>
                     <Text className={styles.feature_price}>
-                      ${`${formatPrice(feature.minBudget)} - ${formatPrice(feature.maxBudget)}`}
+                      {`$${formatPrice(feature.minBudget)} - ${formatPrice(feature.maxBudget)}`}
                     </Text>
                   </Flex>
                 ))}

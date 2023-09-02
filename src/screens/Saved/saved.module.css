@@ -16,7 +16,6 @@
 
 .container:hover {
   cursor: pointer;
-  box-shadow: var(--crd-shadow);
 }
 
 .title {
