@@ -15,7 +15,7 @@ interface RootLayoutProps {
 }
 
 const RootLayout: FC<RootLayoutProps> = ({children}) => (
-  <AnimatePresence>
+  <AnimatePresence mode="wait">
     <Provider store={store}>
       <html lang="en">
         <body>
