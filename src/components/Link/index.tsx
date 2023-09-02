@@ -6,6 +6,7 @@ import {usePathname} from 'next/navigation';
 
 import {cn} from '@lib';
 
+import {Flex} from '../Flex';
 import {Text} from '../Text';
 
 import styles from './link.module.css';
@@ -24,9 +25,15 @@ const Link: FC<LinkProps> = ({href, children, className, activeClassName, textSt
   if (typeof children === 'string') {
     return (
       <NextLink className={cn(styles.link, className, pathname === href && activeClassName)} href={href} {...props}>
-        <Text as="h2" className={cn(styles.text, textStyle, pathname === href && activeTextStyle)}>
-          {children}
-        </Text>
+        <Flex
+          whileHover={{scale: 1.1}}
+          whileTap={{scale: 0.9}}
+          transition={{type: 'spring', stiffness: 400, damping: 10}}
+        >
+          <Text as="h2" className={cn(styles.text, textStyle, pathname === href && activeTextStyle)}>
+            {children}
+          </Text>
+        </Flex>
       </NextLink>
     );
   }

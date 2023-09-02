@@ -43,6 +43,7 @@ const Modal: FC<ModalProps> = ({children, className, show, onClose}) => {
           initial={{backdropFilter: 'blur(0px)'}}
           animate={{backdropFilter: 'blur(5px)'}}
           exit={{backdropFilter: 'blur(0px)'}}
+          transition={{delay: 0.05}}
         >
           <motion.div
             className={cn(styles.modal_content, className)}

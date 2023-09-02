@@ -30,8 +30,9 @@ const Button: FC<ButtonProps> = ({
   <motion.button
     className={cn(styles.button, className, styles[variant], styles[size], destroy && styles.destroy)}
     type={type}
-    whileHover={{scale: [null, 1.2, 1.2]}}
-    transition={{duration: 0.2}}
+    whileHover={{scale: 1.1}}
+    transition={{duration: 0.2, type: 'spring'}}
+    whileTap={{scale: 0.9}}
     {...props}
   >
     {typeof children === 'string' ? <Text className={styles.text}>{children}</Text> : children}
