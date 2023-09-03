@@ -18,6 +18,11 @@ const RootLayout: FC<RootLayoutProps> = ({children}) => (
   <AnimatePresence mode="wait">
     <Provider store={store}>
       <html lang="en">
+        <head>
+          <meta name="description" content="an event builder" />
+          <title>Swenson-he Event Builder</title>
+        </head>
+
         <body>
           <HomeLayout>{children}</HomeLayout>
         </body>
