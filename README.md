@@ -25,9 +25,33 @@
 
 - [Demo](https://swensonhe.omarramoun.com/)
 
+## Outline of Building Process
+
+0. Prepare Project Structuree, Dependecy Management, Build System, Linting System, and Application Configs.
+1. Build a site map
+2. UI Breakdown to components (core components, navigation, layouts, pages)
+3. Build components library (core building blocks of the app - under `src/components`)
+4. Build a styling system using `css-modules` (including theme and global styles - under `src/styles`)
+5. Add styling to core components
+6. Build layout components (responsible for common layouts between pages - under `src/layouts`)
+7. Build pages of the app (starting with the home page - under `src/screens`)
+8. Build hooks and utility functions (under `src/hooks` and `src/utils`)
+9. Build data fetching patterns (using `swr` - under `src/hooks`)
+10. Add global state (using `Redux Toolkit` - under `src/state`)
+11. Add animations (using `Framer Motion`)
+12. [Coming Soon] Unit Tests and Mocks.
+13. [Coming Soon] Performance Optimization
+14. [Coming Soon] Add Security Layers
+
+
 ## Built With
 
-- Framework: _**Next.js, Redux, CSS-Modules, Framer Motion**_
+1. **Typescript**
+2. **Next.js**
+3. **CSS-Modules**
+4. **Redux Toolkit**
+5. **Framer Motion**
+
 
 ## How to run Locally
 
